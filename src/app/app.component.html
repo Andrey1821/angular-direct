@@ -1,0 +1,20 @@
+<div align="center">
+  <h1>Angular world</h1>
+
+  <p app-style ='red' [dStyle] = "{border : '1px solid black', fontWeight: 'bold', borderRadius: '5px'}">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, delectus?</p>
+
+  <button class="btn" (click)="Visible = !Visible">Visible</button>
+
+<!--  <div class="wrap" *appIfnot="!Visible">-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, sequi?</p>-->
+<!--  </div>-->
+  <!--можно и без восклицательного знака !!!-->
+</div>
+
+<ng-template [appIfnot]="!Visible">
+  <div class="wrap">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, sequi?</p>
+  </div>
+</ng-template>
+<!--на самом деле все происходит в ng-template через binding-->
